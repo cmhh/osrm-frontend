@@ -7,8 +7,7 @@ var osm = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
   }),
   osm_de = L.tileLayer('https://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright/en">OpenStreetMap</a> contributors'
-  }),
-  small_components = L.tileLayer('https://tools.geofabrik.de/osmi/tiles/routing_i/{z}/{x}/{y}.png', {});
+  });
 
 module.exports = {
   defaultState: {
@@ -26,10 +25,10 @@ module.exports = {
   layer: [{
     'openstreetmap.org': osm,
     'openstreetmap.de.org': osm_de
-  }],
+  }]/*,
   overlay: {
     'Small Components': small_components
-  },
+  }*/,
   baselayer: {
     one: osm,
     two: osm_de
